@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+/* font-family: 'Pangolin', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+/* font-family: 'Train One', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+:root {
+  --black-color: rgb(27, 27, 27);
+  --white-color: rgb(201, 201, 201);
+  --bar-back: rgb(190, 190, 190);
+  --bar-in: rgb(100, 255, 100);
+  --profile-size: 150px;
+  --profile-background: rgb(165, 165, 165);
+}
+
+* {
+  list-style: none;
+  padding: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-image: url(img/background.png);
+}
+header {
+  height: 10px;
+  display: fixed;
+  background-color: wheat;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--profile-background);
+  padding: 12px 15%;
+  font-family: "Pangolin", cursive;
+}
+.imgandtext {
+  display: flex;
+}
+.profileimg {
+  margin-right: 5%;
+}
+.profile .imgandtext .text .name {
+  font-size: 36px;
+}
+.profile .imgandtext .text .occupation {
+  font-size: 24px;
+}
+.profileimg {
+  width: var(--profile-size);
+  border-radius: 8px;
+}
+.icons {
+  display: flex;
+}
+.skill,
+.icon {
+  width: 30px;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  width: 35px;
+}
+.main {
+  display: flex;
+  padding: 0px 15%;
+  margin-top: 5%;
+}
+.portfolio,
+.skills {
+  background-color: var(--white-color);
+  font-family: "Train One", cursive;
+  text-align: center;
+}
+.textarea {
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  margin-top: 3%;
+  padding: 0px 3%;
+}
+.skillbar {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+.portfolio {
+  width: 70%;
+  height: 500px;
+  margin-right: 5%;
+}
+
+.skills {
+  width: 30%;
+  height: 500px;
+}
+
+.bar {
+  width: 70%;
+  height: 15px;
+  background-color: var(--bar-back);
+  border-radius: 4px;
+}
+
+.bar-init {
+  background-color: var(--bar-in);
+  height: 100%;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .portfolio,
+  .skills {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
